@@ -16,6 +16,7 @@ It intentionally does not contain Android application source code.
 | Payload | Compatible models | Kernel version | Status |
 | --- | --- | --- | --- |
 | `galaxy-s25-series-2026-06-07` | Galaxy S25, S25+, S25 Edge, and S25 Ultra regional models | `6.6.98` | Device-tested |
+| `pa2q-S9360ZHSCCZG1` | Galaxy S25+ `SM-S9360` (Hong Kong `OZS`, `pd6ff1cd` GKI) | `6.6.98` | Device-tested |
 | `e3q-S928USQS6DZF2` | Galaxy S24 Ultra `SM-S928U1` | `6.1.145` | Device-tested |
 | `e3q-S9280ZCS6DZF2` | Galaxy S24 Ultra China `SM-S9280` | `6.1.145` | Device-tested |
 | `e2s-S926BXXUEDZDR` | Galaxy S24+ `SM-S926B` | `6.1.157` | Device-tested |
@@ -49,6 +50,7 @@ schema version 3. `targets-v2.json` is retained for released 0.2.3 clients.
 
 ```sh
 make TARGET=pa3q-S938NKSUACZF1 ANDROID_NDK_HOME=/path/to/android-ndk
+make TARGET=pa2q-S9360ZHSCCZG1 ANDROID_NDK_HOME=/path/to/android-ndk
 make TARGET=e3q-S928USQS6DZF2 ANDROID_NDK_HOME=/path/to/android-ndk
 make TARGET=e2s-S926BXXUEDZDR ANDROID_NDK_HOME=/path/to/android-ndk
 make TARGET=essi-S721NKSSCDZF3 ANDROID_NDK_HOME=/path/to/android-ndk
