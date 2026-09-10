@@ -11,6 +11,32 @@ This repository contains the device-specific native side of
 
 It intentionally does not contain Android application source code.
 
+## Fork additions (`butlanys`)
+
+This fork carries the Galaxy S25+ Hong Kong (`OZS`, `pd6ff1cd` GKI) port plus
+the per-boot KernelSU tooling that came out of debugging it:
+
+- **`pa2q-S9360ZHSCCZG1` profile** -- Galaxy S25+ `SM-S9360`,
+  `6.6.98-android15-8-pd6ff1cd-abogkiS9360ZHSCCZG1-4k`, device-tested through
+  temporary root and the KernelSU LKM late-load. Offsets, the physical-P0
+  fingerprint and the validation log are in
+  [`docs/SM-S9360-S9360ZHSCCZG1.md`](docs/SM-S9360-S9360ZHSCCZG1.md).
+- **Module rescue tooling** -- [`tools/module-rescue.sh`](tools/module-rescue.sh)
+  with the device-side helpers in [`tools/device/`](tools/device/) inspect, back
+  up, disable and remove KernelSU modules, and can load the kernel driver
+  without running the late-load stage. It exists because one bad module (a
+  `system/` overlay mounted through the `mountify` metamodule) turned the
+  expected warm framework restart of the late-load into a cold reset, which
+  drops the per-boot root before the module can be removed. Recovery ladder:
+  [`tools/README.md`](tools/README.md#recovering-from-a-bad-module).
+- **LAN / mock feed server** -- [`tools/feed_server.py`](tools/feed_server.py)
+  serves `support/targets-v3.json` and every artifact from a local checkout, so
+  the app can be built and tested without GitHub. The companion app fork
+  (<https://github.com/butlanys/Root-My-Galaxy>) adds the matching
+  `-PfeedCommitApi` / `-PfeedRawBase` Gradle flags.
+- **Per-boot by design** -- no boot image is modified; KernelSU and `su` exist
+  only for the current boot, and a reboot restores the stock system.
+
 ## Supported payloads
 
 | Payload | Compatible models | Kernel version | Status |
@@ -101,5 +127,8 @@ The SM-A536E GZG3 device validation is in
 [`docs/SM-A536E-A536EXXSNGZG3.md`](docs/SM-A536E-A536EXXSNGZG3.md).
 The SM-S9280 China (CHC) DZF2 port and validation record is in
 [`docs/SM-S9280-S9280ZCS6DZF2.md`](docs/SM-S9280-S9280ZCS6DZF2.md).
+The SM-S9360 Hong Kong (OZS) ZHS port, its build-specific offsets and the
+module-rescue procedure are in
+[`docs/SM-S9360-S9360ZHSCCZG1.md`](docs/SM-S9360-S9360ZHSCCZG1.md).
 
 Use only on devices you own or are explicitly authorized to test.

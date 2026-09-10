@@ -193,6 +193,109 @@ is back. The first zygote spawn can also fail transiently
 retries and the framework comes up normally. This is not a kernel panic and
 does not clear the KernelSU module.
 
+### Module-induced cold reboot during late-load
+
+Because KernelSU is late-loaded per boot, `/data/adb/modules` is mounted for
+the first time inside the late-load, i.e. at the same moment zygote is
+restarted. A module that wedges that restart (a Zygisk module whose `zygisk/`
+payload crashes `app_process`, or a `system/` overlay of
+`system/etc/security/cacerts` that breaks the loader) turns the expected warm
+framework restart into a hang that init/Samsung escalation resolves with a
+**cold** reset: `kernelsu` is unloaded, the per-boot root is gone, and the
+module itself is untouched in `/data/adb` -- so the loop repeats on every
+attempt with no window to remove it from inside the app.
+
+The escape is to never late-load KernelSU while the offending module is still
+installed:
+
+```sh
+tools/reroot.sh --no-ksu          # bootstrap root only: modules are not
+                                  # loaded, so the device does not freeze
+tools/module-rescue.sh list       # inspect /data/adb/modules (+ ksu configs,
+                                  # post-fs-data.d, service.d)
+tools/module-rescue.sh purge cert # back up to /data/local/tmp + artifacts/,
+                                  # then delete the matching module dirs
+tools/module-rescue.sh load-ksu   # late-load KernelSU again
+```
+
+`tools/module-rescue.sh` drives `tools/device/rmg-module-tool.sh` through the
+bootstrap root daemon that `reroot.sh --no-ksu` leaves at
+`/data/local/tmp/temp_su.sock`; `disable <pattern>` and `disable-all` are the
+non-destructive variants. `load-ksu` prints the `boot_id` before and after the
+late-load: an unchanged `boot_id` proves the framework restart happened without
+a cold reset. The device is never bricked by this class of failure -- a cold
+boot loads no KernelSU at all, so every boot starts from a clean `/data/adb`.
+
+### The bootstrap root cannot see `/data/adb`
+
+The exploit's root daemon runs as `u:r:kernel:s0` and has no KernelSU DEFEX/KDP
+credential sync (the kernel module strings say `Samsung DEFEX credential
+synchronization and KSU-task bypass enabled` / `Samsung KDP task-scoped
+credential and direct PGD path enabled`). Even with `enforce=0` and `uid=0`,
+`samsung/pa2q` answers `ls: /data/adb/modules: Operation not permitted` for
+that context, while `stat` on a known path still succeeds. Reading or purging
+modules therefore **must** happen in KernelSU's own domain (`u:r:ksu:s0`),
+which is what `ksud`/the Manager use.
+
+Two ways out, without ever letting the app mount modules again:
+
+1. `tools/module-rescue.sh driver` -- loads the KernelSU kernel module and
+   nothing else:
+
+   ```text
+   unshare -m /system/bin/sh -c "mount -o bind /data/local/tmp/ksud-s25u-kdp \
+     /system/bin/logcat && /system/bin/logcat insmod \
+     /data/local/tmp/kernelsu-s25u-kdp.ko allow_shell=1"
+   ```
+
+   No `post-fs-data` stage runs, so no module is mounted and no zygote restart
+   is triggered; `allow_shell=1` makes `su` work for the shell. The helper's
+   `unshare` cannot make the tree rprivate, so the logcat bind mount is
+   detected and removed again, and `driver-unload` (`ksud unload`) undoes the
+   load. Once `su` answers, every module action of `module-rescue.sh`
+   automatically switches to the `su` transport and `/data/adb` is readable.
+
+2. Safe-mode late-load: the kernel module counts `KEY_VOLUMEDOWN` events
+   (`check_safemode`, `KEY_VOLUMEDOWN pressed max times, safe mode detected!`;
+   its only parameters are `allow_shell` and `norc`), and ksud then prints
+   `safe mode, skip post-fs-data scripts and disable all modules!` -- every
+   module gets a `disable` marker, so the offending module is never mounted and
+   the framework restart survives. Tap Volume Down 3-5 times right after
+   `load-ksu` starts.
+
+### Recovering from a bad module (hardware-verified 2026-09-10)
+
+The failure this was written for: `CA-Installer` (a `system/` overlay of
+`system/etc/security/cacerts` plus a `post-fs-data.sh`, mounted through the
+`mountify` metamodule) turned the expected warm framework restart of the
+late-load into a cold reset, so the per-boot root was gone before anything
+could be removed, and `/data/adb` was unreadable from the bootstrap root.
+
+Two hard facts make the rescue work:
+
+* the bootstrap root (`u:r:kernel:s0`) gets `EPERM` on **readdir** of
+  `/data/adb/modules` (DEFEX), while `mount`, `stat` and `ksud`-driven access
+  in `u:r:ksu:s0` are fine -- so never enumerate modules from the bootstrap
+  context;
+* loading `kernelsu.ko` immediately restores SELinux enforcing and the daemon
+  socket becomes unreachable, so anything that must run after the load has to
+  happen inside the same request (or through `su`).
+
+Ladder, cheapest first:
+
+| situation | action |
+| --- | --- |
+| before installing anything | `tools/module-rescue.sh snapshot` (full module + ksu config backup) |
+| KSU loaded and `su` answers | `tools/module-rescue.sh list` -> `disable <id>` / `purge <id>` (transport auto-switches to `su`) |
+| KSU **not** loaded, suspect module installed | `tools/reroot.sh --no-ksu` then `tools/module-rescue.sh --shadow-modules load-ksu`: empty dirs are bind-mounted over `/data/adb/modules(_update)`, ksud's post-fs-data sees no modules, the framework restart survives, `su` comes up; then `su -c 'umount /data/adb/modules'` (the script does it) and purge normally |
+| only the bootstrap daemon, `/data/adb` unreadable | `tools/module-rescue.sh chain` / `driver` (bind-spoofed `.ko` path) or the volume-key safe mode above |
+
+The shadow trick works because `mount -o bind <empty> /data/adb/modules` succeeds
+even though listing the same directory does not: DEFEX blocks the enumeration,
+not the mount. The verified end state after removal: full `reroot.sh` reaches
+`su` in `u:r:ksu:s0` with an unchanged `boot_id` (no cold reset) and
+`/system/etc/security/cacerts` back to the stock 143 entries.
+
 ## 7. Device validation (2026-09-08)
 
 Build:
@@ -321,6 +424,10 @@ The earlier run (log: `validation-2026-09-08-reroot-reboot.log`) exercised the
 shell fallback and left `/system/bin/logcat` bind-mounted globally; that leak
 is now detected and cleaned by the script, and the rebuilt helper no longer
 needs the fallback.
+
+`tools/module-rescue.sh` (see "Module-induced cold reboot during late-load"
+above) reuses the same transport to inspect, back up, disable or delete
+KernelSU modules while KernelSU itself is *not* loaded.
 
 ## 9. Scope
 
