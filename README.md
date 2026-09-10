@@ -1,4 +1,9 @@
-# Root My Galaxy Payloads
+# SM-S9360 — Root My Galaxy Payloads
+
+Personal backup fork of
+[Root My Galaxy Payloads](https://github.com/BuSung-dev/Root-My-Galaxy-Payloads)
+for the Galaxy S25+ `SM-S9360` (`pa2q`); see
+[Fork additions](#fork-additions-butlanys) below.
 
 This repository contains the device-specific native side of
 [Root My Galaxy](https://github.com/BuSung-dev/Root-My-Galaxy):
