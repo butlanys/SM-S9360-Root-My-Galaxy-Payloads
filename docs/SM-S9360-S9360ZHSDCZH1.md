@@ -64,9 +64,9 @@ The two builds were compared byte-for-byte and symbol-for-symbol:
 | --- | --- |
 | raw Image size | identical (38849024), different SHA-256 |
 | differing bytes | 1105954 in 119106 runs; 54.1 % of 4 KiB pages identical |
-| `vmlinux-to-elf` symbols | 114227 in both |
-| named symbols at identical addresses | 110044 of 110068 in `--numeric-sort` dump |
-| the 24 that moved | local/aliased names only (`add`, `phy_init`, `get_filename`, `tegra_powergate_*`, `.L`-style duplicates) — none used by this profile |
+| `vmlinux-to-elf` symbols | 114227 lines / 110068 unique names, both builds |
+| unique symbol names at identical addresses | 110058 of 110068 |
+| the 10 that moved | local labels sitting in the `.rodata` string pool, shifted by exactly the pool deltas: `f_midi_shortname`, `note_page.units`, `task_index_to_char.state_char`, `trunc_msg`, `pty_line_name.ptychar` (+0x33), `zero_mask` (+0x49), `max_tt_usecs`, `f_midi_longname` (+0x74), `__cert_list_end`, `__module_cert_end` (+1) — none used by this profile |
 | BTF | byte-identical, same validated interval |
 | the 22 symbol offsets below | all identical |
 
