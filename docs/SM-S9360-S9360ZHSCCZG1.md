@@ -432,9 +432,11 @@ KernelSU modules while KernelSU itself is *not* loaded.
 ## 9. Scope
 
 Verified only for `SM-S9360` / `S9360ZHSCCZG1` (`OZS`, `pd6ff1cd-abogki`
-GKI). `targets-v3.json` now lists both `pa2q` regional builds; because both
-match `SM-S9360` + `6.6.98`, automatic selection returns the first entry
-(`pa2q-S9360ZCSCCZG1`). ZHS devices must select
-`pa2q-S9360ZHSCCZG1` manually in advanced mode, or be served a filtered feed
-(see the mock-distribution section of the porting guide). Do not use the ZCS
-payload on a ZHS build.
+GKI). `targets-v3.json` now lists three `pa2q` regional builds
+(`S9360ZCSCCZG1`, `S9360ZHSCCZG1`, `S9360ZHSDCZH1`); because all three match
+`SM-S9360` + `6.6.98`, automatic selection returns the first entry
+(`pa2q-S9360ZCSCCZG1`). ZHS/CZH1 devices must select
+`pa2q-S9360ZHSCCZG1` / `pa2q-S9360ZHSDCZH1` manually in advanced mode, or be
+served a filtered feed (see the mock-distribution section of the porting
+guide). Do not use the ZCS payload on a ZHS or CZH1 build, nor the CZG1
+payload on a CZH1 build.
