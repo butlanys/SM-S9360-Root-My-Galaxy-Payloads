@@ -5,8 +5,8 @@ Built 2026-09-26 for `SM-S9360` / `S9360ZHSDCZH1` (Hong Kong `OZS`).
 **Device-tested: the injection works on hardware.** The device owner ran the
 profile on an `SM-S9360` running `S9360ZHSDCZH1` on 2026-09-26 and the
 CVE-2026-43499 injection succeeded. The KernelSU late-load half of the run is
-not separately recorded here, so treat "exploit + root" as confirmed and the
-module step as still to be written up.
+not separately recorded here, so treat the injection as confirmed and the
+module/root step as still to be written up.
 
 | file | size | SHA-256 | use |
 | --- | ---: | --- | --- |
