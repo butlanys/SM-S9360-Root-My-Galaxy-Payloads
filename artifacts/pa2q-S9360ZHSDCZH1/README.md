@@ -2,10 +2,11 @@
 
 Built 2026-09-26 for `SM-S9360` / `S9360ZHSDCZH1` (Hong Kong `OZS`).
 
-**Offline-verified only: not yet executed on a device.** Run
-`tools/reroot.sh --target pa2q-S9360ZHSDCZH1` (or `--force` after confirming
-the fingerprint) and record the log here before treating this profile as
-device-tested.
+**Device-tested: the injection works on hardware.** The device owner ran the
+profile on an `SM-S9360` running `S9360ZHSDCZH1` on 2026-09-26 and the
+CVE-2026-43499 injection succeeded. The KernelSU late-load half of the run is
+not separately recorded here, so treat "exploit + root" as confirmed and the
+module step as still to be written up.
 
 | file | size | SHA-256 | use |
 | --- | ---: | --- | --- |
@@ -30,4 +31,5 @@ the same module the CZG1 profile uses. The KMI string
 (`6.6.98-android15-8`) is unchanged by this build; only the
 `pd6ff1cd-abogki<S9360ZHSDCZH1>-4k` local suffix changed, and the late-load
 path loads with `MODULE_INIT_IGNORE_VERMAGIC`, so no module rebuild is
-required. Not yet confirmed on hardware.
+required. The injection is confirmed on hardware; the late-load step has not
+been separately recorded.

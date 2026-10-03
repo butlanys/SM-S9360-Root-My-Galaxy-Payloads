@@ -6,7 +6,10 @@ current Hong Kong update for `SM-S9310`, Galaxy S25).
 
 **Hardware validation is still pending.** Every value below was derived from
 this build's own kernel Image, BTF and symbol table; the exploit has *not*
-been run on an `SM-S9310`/`S9310ZHSDCZH1` device yet.
+been run on an `SM-S9310`/`S9310ZHSDCZH1` device yet. Its S9360 sibling
+(`pa2q-S9360ZHSDCZH1`, built three minutes earlier) is device-tested, and the
+two images share everything except the one string offset this profile changes
+(§2), so the untested surface here is that single constant.
 
 ## 1. Firmware identity
 

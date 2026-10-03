@@ -6,6 +6,13 @@ Built 2026-09-26 for `SM-S9310` / `S9310ZHSDCZH1` (Hong Kong `OZS`).
 `tools/reroot.sh --target pa1q-S9310ZHSDCZH1` (or pick the profile in the app)
 and record the log here before treating this profile as device-tested.
 
+Confidence note: this profile's S9360 sibling (`pa2q-S9360ZHSDCZH1`, built
+three minutes earlier from the same GKI source) **is** device-tested — the
+injection works on an `SM-S9360` running `S9360ZHSDCZH1`. The two images share
+their BTF, all 22 offsets, the `worker_thread` window and the p0 fingerprint
+table, so the only value that has not been exercised on hardware here is the
+one this profile changes (`SLIDE_NFULNL_LOGGER_NAME_OFF = 0x0175e2e2`).
+
 | file | size | SHA-256 | use |
 | --- | ---: | --- | --- |
 | `cve-2026-43499-app.so` | 126624 | `6265f43b88741ef2a69135084cfd36e84d73a029ae8a3874187641da58c895e0` | app payload (`--run-payload` / LD_PRELOAD); this is the feed artifact |

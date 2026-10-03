@@ -1,13 +1,15 @@
 # SM-S9360 / S9360ZHSDCZH1 porting record
 
-Offline port of profile `pa2q-S9360ZHSDCZH1`, built 2026-09-26 from the
+Port of profile `pa2q-S9360ZHSDCZH1`, built 2026-09-26 from the
 `TGY`/`OZS` factory package for `S9360ZHSDCZH1` (released 2026-09-03, the
 current Hong Kong update for `SM-S9360`).
 
-**Hardware validation is still pending.** Every value below was derived from
-this build's own kernel Image and BTF, and the build passed the offline gates
-in [`PORTING.md`](PORTING.md); the exploit has *not* been run on an
-`SM-S9360`/`S9360ZHSDCZH1` device yet.
+**Device-tested: the injection works.** Every value below was derived from this
+build's own kernel Image and BTF, the build passed the offline gates in
+[`PORTING.md`](PORTING.md), and the device owner then ran the profile on an
+`SM-S9360` running `S9360ZHSDCZH1` on 2026-09-26 with the CVE-2026-43499
+injection succeeding. The KernelSU late-load step is not separately recorded
+(see §7).
 
 ## 1. Firmware identity
 
@@ -188,8 +190,7 @@ SLIDE_STACK_WRITER       default for 6.6 pa2q (no override in the Makefile)
 Unchanged. This Image has `text_offset == 0`, the same `gunyah_hyp_region`
 direct-map derivation as CZG1 applies, and the CZG1 hardware run proved the
 `0xa8000000` value on this device family. The CZH1 kernel's `xbl_config`
-carries the same literal. Hardware confirmation is still pending for this
-build (see §7).
+carries the same literal, and the device run in §7 confirms it on this build.
 
 ## 5. p0 fingerprint
 
@@ -231,14 +232,21 @@ confirmed on this build**.
 
 ## 7. Validation status and what to do next
 
+**Device-tested 2026-09-26**: the device owner ran this profile on an
+`SM-S9360` running `S9360ZHSDCZH1` and the CVE-2026-43499 injection succeeded,
+which confirms the derived offsets, the physical load address and the p0
+fingerprint on hardware. The KernelSU late-load step is not separately
+recorded, so the DEFEX/KDP behaviour described in §6 still rests on the CZG1
+run rather than this build.
+
 Passed offline: kernel/BTF extraction, symbol and layout derivation (all 22
 offsets re-derived, not copied), P0 fingerprint generation and verification,
 `make all` build with the official NDK, artifact disassembly diff against
 CZG1, feed JSON validation.
 
-Pending on hardware:
+Still worth capturing from the device run:
 
-1. Confirm the build identity on the device:
+1. The build identity as reported by the device itself:
 
    ```sh
    adb shell getprop ro.build.fingerprint
@@ -254,7 +262,7 @@ Pending on hardware:
    `S9360ZCSCCZG1` and 2026-07 `S9360ZHSCCZG1` builds). If the device reports
    a different `ro.build.fingerprint`, patch that one line — nothing else in
    the profile depends on it, and the built artifacts do not embed it.
-2. Run the exploit and KernelSU late-load:
+2. Re-run with the KernelSU half and keep the log:
 
    ```sh
    tools/reroot.sh --target pa2q-S9360ZHSDCZH1 --attempts 16
@@ -263,7 +271,6 @@ Pending on hardware:
    `tools/reroot.sh` refuses to run unless the device fingerprint matches the
    profile; use `--force` only to test a mismatch deliberately.
 3. Record the logs in [`../artifacts/pa2q-S9360ZHSDCZH1/`](../artifacts/pa2q-S9360ZHSDCZH1/)
-   and update the artifact README from "offline-verified" to "device-tested"
    with the observed `p0_offset`, `slide-kaslr-ok` source, cache-gate line and
    `u:r:ksu:s0` confirmation.
 

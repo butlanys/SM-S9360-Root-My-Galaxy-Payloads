@@ -28,17 +28,18 @@ the per-boot KernelSU tooling that came out of debugging it:
   [`docs/SM-S9360-S9360ZHSCCZG1.md`](docs/SM-S9360-S9360ZHSCCZG1.md).
 - **`pa2q-S9360ZHSDCZH1` profile** -- Galaxy S25+ `SM-S9360`,
   `6.6.98-android15-8-pd6ff1cd-abogkiS9360ZHSDCZH1-4k` (Hong Kong `OZS`,
-  released 2026-09-03), built 2026-09-26. Offline-verified: the kernel keeps
-  the CZG1 layout, so the profile differs only in
-  `SLIDE_NFULNL_LOGGER_NAME_OFF` (`0x0175e299`) and one p0 fingerprint row.
-  Hardware validation is still pending -- see
+  released 2026-09-03), built 2026-09-26. The kernel keeps the CZG1 layout, so
+  the profile differs only in `SLIDE_NFULNL_LOGGER_NAME_OFF` (`0x0175e299`) and
+  one p0 fingerprint row. **Device-tested 2026-09-26: the injection works on
+  an `SM-S9360` running this build.** See
   [`docs/SM-S9360-S9360ZHSDCZH1.md`](docs/SM-S9360-S9360ZHSDCZH1.md).
 - **`pa1q-S9310ZHSDCZH1` profile** -- Galaxy S25 `SM-S9310`,
   `6.6.98-android15-8-pd6ff1cd-abogkiS9310ZHSDCZH1-4k` (Hong Kong `OZS`,
   released 2026-09-03), built 2026-09-26. The same-day sibling of the S9360
   build: identical BTF, all 22 symbol offsets and the p0 fingerprint table are
-  shared, and only `SLIDE_NFULNL_LOGGER_NAME_OFF` (`0x0175e2e2`) differs.
-  Hardware validation is still pending -- see
+  shared, and only `SLIDE_NFULNL_LOGGER_NAME_OFF` (`0x0175e2e2`) differs. Its
+  S9360 sibling is now device-tested, which validates the shared layout, but
+  this profile itself has not been run on an `SM-S9310` yet -- see
   [`docs/SM-S9310-S9310ZHSDCZH1.md`](docs/SM-S9310-S9310ZHSDCZH1.md).
 - **Module rescue tooling** -- [`tools/module-rescue.sh`](tools/module-rescue.sh)
   with the device-side helpers in [`tools/device/`](tools/device/) inspect, back
@@ -62,7 +63,7 @@ the per-boot KernelSU tooling that came out of debugging it:
 | --- | --- | --- | --- |
 | `galaxy-s25-series-2026-06-07` | Galaxy S25, S25+, S25 Edge, and S25 Ultra regional models | `6.6.98` | Device-tested |
 | `pa2q-S9360ZHSCCZG1` | Galaxy S25+ `SM-S9360` (Hong Kong `OZS`, `pd6ff1cd` GKI) | `6.6.98` | Device-tested |
-| `pa2q-S9360ZHSDCZH1` | Galaxy S25+ `SM-S9360` (Hong Kong `OZS`, `pd6ff1cd` GKI) | `6.6.98` | Built 2026-09-26: offline-verified, hardware validation pending |
+| `pa2q-S9360ZHSDCZH1` | Galaxy S25+ `SM-S9360` (Hong Kong `OZS`, `pd6ff1cd` GKI) | `6.6.98` | Device-tested 2026-09-26 (injection confirmed; KSU late-load log pending) |
 | `pa1q-S9310ZHSDCZH1` | Galaxy S25 `SM-S9310` (Hong Kong `OZS`, `pd6ff1cd` GKI) | `6.6.98` | Built 2026-09-26: offline-verified, hardware validation pending |
 | `e3q-S928USQS6DZF2` | Galaxy S24 Ultra `SM-S928U1` | `6.1.145` | Device-tested |
 | `e3q-S9280ZCS6DZF2` | Galaxy S24 Ultra China `SM-S9280` | `6.1.145` | Device-tested |
