@@ -467,6 +467,25 @@
         "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-s25u-kdp",
         "size": 6407096
       }
+    },
+    {
+      "payloadId": "pa2q-S9360ZHUDDZIF",
+      "displayName": "Galaxy S25+ | Kernel 6.6.127 (S9360ZHUDDZIF)",
+      "models": [
+        "SM-S9360"
+      ],
+      "kernelVersions": [
+        "6.6.127",
+        "6.6.127-android15-8-p33f4ffe-abogkiS9360ZHUDDZIF-4k"
+      ],
+      "exploit": {
+        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/pa2q-S9360ZHUDDZIF/cve-2026-43499-app.so",
+        "size": 126624
+      },
+      "kernelsu": {
+        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-s25u-kdp",
+        "size": 6407096
+      }
     }
   ]
 }

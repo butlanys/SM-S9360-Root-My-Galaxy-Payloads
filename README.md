@@ -41,6 +41,13 @@ the per-boot KernelSU tooling that came out of debugging it:
   S9360 sibling is now device-tested, which validates the shared layout, but
   this profile itself has not been run on an `SM-S9310` yet -- see
   [`docs/SM-S9310-S9310ZHSDCZH1.md`](docs/SM-S9310-S9310ZHSDCZH1.md).
+- **`pa2q-S9360ZHUDDZIF` profile** -- Galaxy S25+ `SM-S9360`, Android 17
+  (`meta_OS17`) Hong Kong `OZS`, `6.6.127-android15-8-p33f4ffe-abogkiS9360ZHUDDZIF-4k`,
+  built 2026-10-08 from the FUS package before its OTA rollout. Every one of the
+  22 offsets was re-derived (the kernel moved from 6.6.98 to 6.6.127), but the
+  BTF layouts and the pselect path are unchanged, so it is a re-derivation, not
+  a redesign. Hardware validation is pending -- see
+  [`docs/SM-S9360-S9360ZHUDDZIF.md`](docs/SM-S9360-S9360ZHUDDZIF.md).
 - **Module rescue tooling** -- [`tools/module-rescue.sh`](tools/module-rescue.sh)
   with the device-side helpers in [`tools/device/`](tools/device/) inspect, back
   up, disable and remove KernelSU modules, and can load the kernel driver
@@ -65,6 +72,7 @@ the per-boot KernelSU tooling that came out of debugging it:
 | `pa2q-S9360ZHSCCZG1` | Galaxy S25+ `SM-S9360` (Hong Kong `OZS`, `pd6ff1cd` GKI) | `6.6.98` | Device-tested |
 | `pa2q-S9360ZHSDCZH1` | Galaxy S25+ `SM-S9360` (Hong Kong `OZS`, `pd6ff1cd` GKI) | `6.6.98` | Device-tested 2026-09-26 (injection confirmed; KSU late-load log pending) |
 | `pa1q-S9310ZHSDCZH1` | Galaxy S25 `SM-S9310` (Hong Kong `OZS`, `pd6ff1cd` GKI) | `6.6.98` | Built 2026-09-26: offline-verified, hardware validation pending |
+| `pa2q-S9360ZHUDDZIF` | Galaxy S25+ `SM-S9360` (Hong Kong `OZS`, Android 17 / `p33f4ffe` GKI) | `6.6.127` | Built 2026-10-08: offline-verified, hardware validation pending |
 | `e3q-S928USQS6DZF2` | Galaxy S24 Ultra `SM-S928U1` | `6.1.145` | Device-tested |
 | `e3q-S9280ZCS6DZF2` | Galaxy S24 Ultra China `SM-S9280` | `6.1.145` | Device-tested |
 | `e2s-S926BXXUEDZDR` | Galaxy S24+ `SM-S926B` | `6.1.157` | Device-tested |
@@ -101,6 +109,7 @@ make TARGET=pa3q-S938NKSUACZF1 ANDROID_NDK_HOME=/path/to/android-ndk
 make TARGET=pa2q-S9360ZHSCCZG1 ANDROID_NDK_HOME=/path/to/android-ndk
 make TARGET=pa2q-S9360ZHSDCZH1 ANDROID_NDK_HOME=/path/to/android-ndk
 make TARGET=pa1q-S9310ZHSDCZH1 ANDROID_NDK_HOME=/path/to/android-ndk
+make TARGET=pa2q-S9360ZHUDDZIF ANDROID_NDK_HOME=/path/to/android-ndk
 make TARGET=e3q-S928USQS6DZF2 ANDROID_NDK_HOME=/path/to/android-ndk
 make TARGET=e2s-S926BXXUEDZDR ANDROID_NDK_HOME=/path/to/android-ndk
 make TARGET=essi-S721NKSSCDZF3 ANDROID_NDK_HOME=/path/to/android-ndk
