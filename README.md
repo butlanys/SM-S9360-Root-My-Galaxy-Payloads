@@ -9,12 +9,28 @@ This repository contains the device-specific native side of
 [Root My Galaxy](https://github.com/BuSung-dev/Root-My-Galaxy):
 
 - exact firmware profiles and offsets;
-- the app-domain CVE-2026-43499 exploit source and compiled payload;
+- the app-domain CVE-2026-43499 exploit source;
 - the app bootstrap helper source;
-- the verified KernelSU late-load build artifacts;
-- the support feed consumed by the application.
+- the support feed consumed by the application;
+- the KernelSU patches and build tooling.
 
 It intentionally does not contain Android application source code.
+
+## Where the binaries live
+
+Compiled payloads and KernelSU binaries are **build outputs**, so they are not
+tracked here — the tree stays small and reviewable. Every artifact is published
+as a GitHub release asset instead:
+
+| release tag | contents |
+| --- | --- |
+| `<profile id>`, e.g. `pa2q-S9360ZHSEDZJ1` | `cve-2026-43499-app.so` (feed payload), `cve-2026-43499-root` (su helper), `cve-2026-43499` (root-umh variant) |
+| `kernelsu-v3.2.5` | the `ksud-*-kdp` late-load binaries and the prebuilt `*.ko` modules |
+
+URL shape: `https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/<tag>/<file>`.
+[`support/targets-v3.json`](support/targets-v3.json) points at exactly those
+URLs, so the app downloads from the release and never needs a commit pin.
+Publishing procedure: [`docs/PORTING.md`](docs/PORTING.md) §6 and §8.
 
 ## Fork additions (`butlanys`)
 
@@ -92,7 +108,7 @@ the per-boot KernelSU tooling that came out of debugging it:
 | `dm2q-S916BXXSAFZG1` | Galaxy S23+ `SM-S916B` | `5.15.189` | Experimental: hardware root from ADB shell; not in app feed |
 | `dm3q-S918BXXSAFZF5` | Galaxy S23 Ultra `SM-S918B` | `5.15.189` | Confirmed working: full chain through the app (Shizuku mode) incl. KernelSU late-load and granted `su` |
 
-The S916B FZG1 profile is shell-only today. Its exact tracefs route works from `adb shell`, but direct app-domain execution is not supported. Root My Galaxy would need to delegate the native runner through an authorized shell bridge such as Shizuku. See [`artifacts/dm2q-S916BXXSAFZG1/README.md`](artifacts/dm2q-S916BXXSAFZG1/README.md).
+The S916B FZG1 profile is shell-only today. Its exact tracefs route works from `adb shell`, but direct app-domain execution is not supported. Root My Galaxy would need to delegate the native runner through an authorized shell bridge such as Shizuku. See the release notes of [tag `dm2q-S916BXXSAFZG1`](https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/tag/dm2q-S916BXXSAFZG1).
 
 The S918B FZF5 profile is hardware-verified through the app's Shizuku mode (exploit, KernelSU late-load, granted `su` under enforcing). Its physical-P0 fallback also engages in unprivileged app-domain execution, but rooting without Shizuku is not yet hardware-confirmed. See [`docs/SM-S918B-S918BXXSAFZF5.md`](docs/SM-S918B-S918BXXSAFZF5.md).
 

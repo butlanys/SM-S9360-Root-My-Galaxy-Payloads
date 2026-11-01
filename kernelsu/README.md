@@ -4,6 +4,19 @@ The files in this directory are built from KernelSU `v3.2.5`, commit
 `b0bc817b4e966aa6aa830834eaf6ef765d821d40`. They are not interchangeable
 between KMIs.
 
+**The compiled binaries are not in the tree.** They are published as assets of
+the [`kernelsu-v3.2.5`](https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/tag/kernelsu-v3.2.5)
+release:
+
+```sh
+gh release download kernelsu-v3.2.5 -R butlanys/SM-S9360-Root-My-Galaxy-Payloads
+```
+
+Only the patches ([`patches/`](patches/)) and the audit/build helpers
+([`tools/`](tools/)) are version-controlled. The table below is the manifest of
+what that release must contain; the support feed references the same files by
+release URL.
+
 ## Versioned artifacts
 
 | File | Target | KMI | Purpose |

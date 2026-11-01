@@ -37,7 +37,7 @@ kernelsu 172032 1 - Live ... (OE)
 
 | Artifact | Bytes | SHA-256 |
 | --- | ---: | --- |
-| `artifacts/a36xq-A366WVLS3AYG1/cve-2026-43499-app.so` | 128688 | `481e3425d5038b7b51820d626783d5b1afb50c3358075582f14c94e5d7b52eec` |
+| `https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/a36xq-A366WVLS3AYG1/cve-2026-43499-app.so` | 128688 | `481e3425d5038b7b51820d626783d5b1afb50c3358075582f14c94e5d7b52eec` |
 | `kernelsu/android15-6.6_kernelsu-A366WVLS3AYG1-kdp.ko` | 325760 | `af8867bf794ac884244a652d088a9023441561cf73d4526c3f946e378e2de09c` |
 | `kernelsu/ksud-A366WVLS3AYG1-kdp` | 4889120 | `2288f5f061f9dc9b27f6a3409ab68592c2050f78306dad09348f2363d5380b42` |
 

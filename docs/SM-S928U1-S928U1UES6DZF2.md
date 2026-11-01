@@ -332,7 +332,7 @@ The stable AArch64 application payload is padded to 104,128 bytes. Repeated
 builds produce the same SHA-256:
 
 ```text
-artifacts/e3q-S928USQS6DZF2/cve-2026-43499-app.so
+https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/e3q-S928USQS6DZF2/cve-2026-43499-app.so
 size 104128
 SHA-256 b2931d8980f969b5a0cb05bd67f6804f445ad4a4c867a7b4c4081c2ffac5b36a
 ```
@@ -413,7 +413,7 @@ firmware `S928U1UES6DZF2` and kernel
 
 | File | Size (bytes) | SHA-256 |
 | --- | ---: | --- |
-| `artifacts/e3q-S928USQS6DZF2/cve-2026-43499-app.so` | 104,128 | `b2931d8980f969b5a0cb05bd67f6804f445ad4a4c867a7b4c4081c2ffac5b36a` |
+| `https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/e3q-S928USQS6DZF2/cve-2026-43499-app.so` | 104,128 | `b2931d8980f969b5a0cb05bd67f6804f445ad4a4c867a7b4c4081c2ffac5b36a` |
 | `kernelsu/android14-6.1_kernelsu-e3q-S928USQS6DZF2-kdp.ko` | 400,152 | `ed7afea6cd221d5698739d3a1633264c084ffb77f2df730e5808941e0a555de5` |
 | `kernelsu/ksud-e3q-S928USQS6DZF2-kdp` | 4,998,352 | `10c1bf87f8e475e6ab8c5d1c5a085aa1544ee091f4451ad65141ea75261ab610` |
 

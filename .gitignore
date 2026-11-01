@@ -1,3 +1,14 @@
+# build outputs and machine-specific scratch — never tracked
 /build/
 /diagnostics/
-/artifacts/module-backups/
+/artifacts/
+
+# KernelSU binaries live in the kernelsu-v3.2.5 release; patches and tools stay
+# in the tree
+/kernelsu/*.ko
+/kernelsu/ksud-*
+
+# Nothing compiled belongs here: payloads are release assets
+*.so
+*.o
+*.ko

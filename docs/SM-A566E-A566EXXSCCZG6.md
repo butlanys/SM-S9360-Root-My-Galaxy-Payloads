@@ -49,7 +49,7 @@ is misread as the slide and the fops direct-map verification reads zero.
 The A56 app-domain payload was built as:
 
 ```text
-artifacts/essi-A566EXXSCCZG6/cve-2026-43499-app.so
+https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/essi-A566EXXSCCZG6/cve-2026-43499-app.so
 size: 104128
 SHA-256: f28050c5f291386ec539aac668b218d88ab8df43ec159978b2a7b71a329b0bd5
 ```

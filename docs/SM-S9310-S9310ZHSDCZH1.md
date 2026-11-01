@@ -227,7 +227,7 @@ Pending on hardware:
    profile; `--force` overrides deliberately. Run with `--no-ksu` first if a
    KernelSU module is suspect (see the workspace porting guide, §9 note about
    module-induced cold reboots).
-3. Record the logs in [`../artifacts/pa1q-S9310ZHSDCZH1/`](../artifacts/pa1q-S9310ZHSDCZH1/)
+3. Record the logs in [`pa1q-S9310ZHSDCZH1`](https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/tag/pa1q-S9310ZHSDCZH1)
    and change the artifact README from "offline-verified" to "device-tested"
    with the observed `p0_offset`, cache-gate line and `u:r:ksu:s0`
    confirmation.

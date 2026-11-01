@@ -67,7 +67,7 @@ Built with Android NDK on Windows (clang `aarch64-linux-android35`, `-Oz`,
 `APP_S928_STABLE_RACE=1`), padded to 104,128 bytes:
 
 ```text
-artifacts/e3q-S928BXXS6DZF2/cve-2026-43499-app.so
+https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/e3q-S928BXXS6DZF2/cve-2026-43499-app.so
 size 104128
 SHA-256 a49b378d654c7e637697a701c3c4c5fd02d22b9b30a7069c03e64ec5844af206
 ```

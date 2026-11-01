@@ -406,7 +406,7 @@ recovery is a reboot and another run (probabilistic futex/fops races).
 
 Verified end-to-end after real reboots on 2026-09-08. The clean run uses the
 helper's own `--late-load` (log:
-`artifacts/pa2q-S9360ZHSCCZG1/validation-2026-09-08-reroot-clean.log`):
+`https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/pa2q-S9360ZHSCCZG1/validation-2026-09-08-reroot-clean.log`):
 
 ```text
 [*] waiting for boot allocator quiet window seconds=96 uptime=24

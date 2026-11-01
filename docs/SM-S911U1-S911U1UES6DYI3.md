@@ -140,7 +140,7 @@ New firmware-specific derivation required by the tracefs slide:
 Updated artifacts:
 
 ```text
-artifacts/dm1q-S911U1UES6DYI3/cve-2026-43499-app.so
+https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/dm1q-S911U1UES6DYI3/cve-2026-43499-app.so
 size: 130464
 SHA-256 35d03089ef6192d14d4b6f1b0472d0f77f2529d8afda3947e9aa2351a3a586e3
 ```
@@ -199,7 +199,7 @@ make TARGET=dm1q-S911U1UES6DYI3 ANDROID_NDK_HOME=... release
 ```
 
 The fixed-size result (104128 bytes) is published at
-`artifacts/dm1q-S911U1UES6DYI3/cve-2026-43499-app.so`:
+`https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/dm1q-S911U1UES6DYI3/cve-2026-43499-app.so`:
 
 ```text
 SHA-256 12b43d1d05f17be4f304796dac7658970adf5cac5af29937146a379ccf1ad591

@@ -140,7 +140,7 @@ make TARGET=e1s-S921BXXSFDZF2 \
 ```
 
 The fixed-size result is published at
-`artifacts/e1s-S921BXXSFDZF2/cve-2026-43499-app.so`.
+`https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/e1s-S921BXXSFDZF2/cve-2026-43499-app.so`.
 
 ## KernelSU compatibility
 

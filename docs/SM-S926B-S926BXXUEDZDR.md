@@ -204,7 +204,7 @@ make TARGET=e2s-S926BXXUEDZDR \
 The fixed-size release artifact is:
 
 ```text
-artifacts/e2s-S926BXXUEDZDR/cve-2026-43499-app.so
+https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/e2s-S926BXXUEDZDR/cve-2026-43499-app.so
 size: 104128
 SHA-256: B1FE6DCC2E4D5CBFC13679F2086835C0A2AB2BE5624F122B23B0C30954670552
 ```

@@ -270,7 +270,7 @@ Still worth capturing from the device run:
 
    `tools/reroot.sh` refuses to run unless the device fingerprint matches the
    profile; use `--force` only to test a mismatch deliberately.
-3. Record the logs in [`../artifacts/pa2q-S9360ZHSDCZH1/`](../artifacts/pa2q-S9360ZHSDCZH1/)
+3. Record the logs in [`pa2q-S9360ZHSDCZH1`](https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/tag/pa2q-S9360ZHSDCZH1)
    with the observed `p0_offset`, `slide-kaslr-ok` source, cache-gate line and
    `u:r:ksu:s0` confirmation.
 

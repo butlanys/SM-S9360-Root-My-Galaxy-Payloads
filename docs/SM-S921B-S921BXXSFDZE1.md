@@ -143,7 +143,7 @@ make TARGET=e1s-S921BXXSFDZE1 \
 
 On macOS, point `TARGET_CC` at the darwin prebuilt clang and shim `stat -c %s`
 for the release size gate. The fixed-size result is published at
-`artifacts/e1s-S921BXXSFDZE1/cve-2026-43499-app.so`.
+`https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/e1s-S921BXXSFDZE1/cve-2026-43499-app.so`.
 
 ## KernelSU compatibility
 

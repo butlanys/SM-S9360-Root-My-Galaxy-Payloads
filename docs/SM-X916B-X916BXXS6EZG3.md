@@ -244,10 +244,10 @@ compat floor and doesn't affect what the resulting binary can run on. The
 `EXPLOIT_ATTEMPT_TIMEOUT_SEC` override is needed so the raised retry budgets
 above have room to actually run to completion.)
 
-Artifact published at `artifacts/gts9u-X916BXXS6EZG3/cve-2026-43499-app.so`
+Artifact published at `https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/gts9u-X916BXXS6EZG3/cve-2026-43499-app.so`
 (SHA-256 `5ae092363e91a118711465238d5f95d6a815d53b3456afae7e367289ed322863`),
 paired with the `su_daemon`-based root client/helper at
-`artifacts/gts9u-X916BXXS6EZG3/cve-2026-43499-root` (SHA-256
+`https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/gts9u-X916BXXS6EZG3/cve-2026-43499-root` (SHA-256
 `c2cd542c4de02c611ddd1f8a98f5adbfc584ee3cfae52bfaab36ca8a894e084f`). Both
 rebuild byte-identically from this branch.
 

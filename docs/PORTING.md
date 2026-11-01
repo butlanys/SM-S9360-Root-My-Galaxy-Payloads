@@ -388,11 +388,21 @@ make TARGET=essi-S721NKSSCDZF3 \
   ANDROID_NDK_HOME=/path/to/android-ndk-r29 release
 ```
 
-The output must be copied to:
+The output is **not** committed. Publish it as a GitHub release whose tag is the
+target id, then reference those asset URLs from the support feed:
 
-```text
-artifacts/essi-S721NKSSCDZF3/cve-2026-43499-app.so
+```sh
+gh release create <target> --target main --title <target> \
+  --notes "Payload artifacts for <target>"
+gh release upload <target> build/<target>/cve-2026-43499 \
+  build/<target>/cve-2026-43499-app.so build/<target>/cve-2026-43499-root
 ```
+
+Payloads are build outputs: keeping them out of the git tree keeps clones small,
+and the release tag pins them as immutably as a commit would. The feed entry
+then points at
+`https://github.com/<owner>/<repo>/releases/download/<target>/cve-2026-43499-app.so`
+(see §8), and the artifact sizes recorded there must match the uploaded files.
 
 ## 7. Build the matching KernelSU module
 
@@ -431,6 +441,15 @@ depends on symbols trimmed from the target export table.
 
 ## 8. Publish the support feed
 
+Artifacts live in GitHub releases, not in the tree. The tag is the target id
+(`pa2q-S9360ZHSEDZJ1`), and the KernelSU binaries share one release
+(`kernelsu-v3.2.5`). Upload, then record the URLs:
+
+```sh
+gh release upload <target> build/<target>/cve-2026-43499-app.so --clobber
+gh release upload kernelsu-v3.2.5 kernelsu/ksud-<target>-kdp --clobber
+```
+
 Add the artifact once to `support/targets-v3.json`, then add every verified
 regional `Build.MODEL` value to `models` and the leading three-part `uname -r`
 value to `kernelVersions`. Kernel suffixes and firmware build identifiers stay
@@ -438,6 +457,12 @@ in the target source and porting notes rather than the runtime support
 manifest. Update artifact sizes, validate the final JSON, and confirm that Root
 My Galaxy can parse it before publishing. The minimal fields are documented in
 [`../support/README.md`](../support/README.md).
+
+Two URL shapes are accepted in the manifest: a `releases/download/<tag>/<name>`
+URL, which the app uses verbatim because the tag already pins it, and a
+branch-relative URL, which the app re-pins to its configured feed base and
+resolved commit. Prefer release URLs — a commit pin only covers files that are
+in the tree.
 
 ## 9. Cleanup policy
 
@@ -447,8 +472,9 @@ After the profile, documentation, and builds have been verified:
    firmware identity, size, and SHA-256;
 2. remove the downloaded multi-gigabyte firmware ZIP, AP/BL archives, boot and
    vendor images, recovered ELF, and temporary BTF dump;
-3. keep the generated target headers, release payload, versioned KO, late-load
-   binary, and source patch under version control.
+3. keep the generated target headers, target notes and source patches under
+   version control, and publish the release payload, versioned KO and late-load
+   binary as release assets — build outputs do not go in the tree.
 
 Hardware execution remains a separate validation step. The S24 FE profile in
 this repository has not been executed on an `SM-S721N` device.

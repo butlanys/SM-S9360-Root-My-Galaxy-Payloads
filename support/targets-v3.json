@@ -40,11 +40,11 @@
         "6.6.98"
       ],
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/pa3q-S938NKSUACZF1/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/galaxy-s25-series-2026-06-07/cve-2026-43499-app.so",
         "size": 104128
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-s25u-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-s25u-kdp",
         "size": 6407096
       }
     },
@@ -59,11 +59,11 @@
         "6.6.98-android15-8-p5a696e2-abogkiS9360ZCSCCZG1-4k"
       ],
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/pa2q-S9360ZCSCCZG1/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/pa2q-S9360ZCSCCZG1/cve-2026-43499-app.so",
         "size": 125904
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-s25u-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-s25u-kdp",
         "size": 6407096
       }
     },
@@ -77,11 +77,11 @@
         "6.6.98"
       ],
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/psq-S9370ZCS9CZG1/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/psq-S9370ZCS9CZG1/cve-2026-43499-app.so",
         "size": 125264
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-s25u-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-s25u-kdp",
         "size": 6407096
       }
     },
@@ -96,11 +96,11 @@
         "6.6.98"
       ],
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/q7q-F966USQU9BZDN/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/q7q-F966USQU9BZDN/cve-2026-43499-app.so",
         "size": 111216
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-s25u-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-s25u-kdp",
         "size": 6407096
       }
     },
@@ -114,11 +114,11 @@
         "6.6.98"
       ],
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/q7q-F966USQSBBZG3/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/q7q-F966USQSBBZG3/cve-2026-43499-app.so",
         "size": 126264
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-s25u-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-s25u-kdp",
         "size": 6407096
       }
     },
@@ -132,11 +132,11 @@
         "6.6.98"
       ],
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/q7q-F966BXXSBBZG3/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/q7q-F966BXXSBBZG3/cve-2026-43499-app.so",
         "size": 125872
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-s25u-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-s25u-kdp",
         "size": 6407096
       }
     },
@@ -151,11 +151,11 @@
         "6.1.145"
       ],
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/e3q-S928USQS6DZF2/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/e3q-S928USQS6DZF2/cve-2026-43499-app.so",
         "size": 104128
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-e3q-S928USQS6DZF2-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-e3q-S928USQS6DZF2-kdp",
         "size": 4998352
       }
     },
@@ -169,11 +169,11 @@
         "6.1.145"
       ],
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/e3q-S928BXXS6DZF2/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/e3q-S928BXXS6DZF2/cve-2026-43499-app.so",
         "size": 104128
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-e3q-S928BXXS6DZF2-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-e3q-S928BXXS6DZF2-kdp",
         "size": 4748232
       }
     },
@@ -188,11 +188,11 @@
       ],
       "requiresFreshP0Session": true,
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/e2s-S926BXXUEDZDR/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/e2s-S926BXXUEDZDR/cve-2026-43499-app.so",
         "size": 104128
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-e2s-S926BXXUEDZDR-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-e2s-S926BXXUEDZDR-kdp",
         "size": 4780056
       }
     },
@@ -207,11 +207,11 @@
       ],
       "requiresFreshP0Session": true,
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/e1s-S921BXXSFDZE1/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/e1s-S921BXXSFDZE1/cve-2026-43499-app.so",
         "size": 104128
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-e1s-S921BXXSFDZE1-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-e1s-S921BXXSFDZE1-kdp",
         "size": 4920520
       }
     },
@@ -230,11 +230,11 @@
         "6.6.102"
       ],
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/essi-A566EXXSCCZG6/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/essi-A566EXXSCCZG6/cve-2026-43499-app.so",
         "size": 104128
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-A566EXXSCCZG6-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-A566EXXSCCZG6-kdp",
         "size": 4765336
       }
     },
@@ -248,11 +248,11 @@
         "6.6.46"
       ],
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/a36xq-A366WVLS3AYG1/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/a36xq-A366WVLS3AYG1/cve-2026-43499-app.so",
         "size": 128688
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-A366WVLS3AYG1-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-A366WVLS3AYG1-kdp",
         "size": 4889120
       }
     },
@@ -267,11 +267,11 @@
       ],
       "requiresFreshP0Session": true,
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/dm3q-S918BXXSAFZF5/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/dm3q-S918BXXSAFZF5/cve-2026-43499-app.so",
         "size": 133344
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-dm3q-S918BXXSAFZF5-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-dm3q-S918BXXSAFZF5-kdp",
         "size": 4879560
       }
     },
@@ -286,11 +286,11 @@
       ],
       "requiresFreshP0Session": true,
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/a53x-A536EXXSNGZG3/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/a53x-A536EXXSNGZG3/cve-2026-43499-app.so",
         "size": 104128
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-A536EXXSNGZG3-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-A536EXXSNGZG3-kdp",
         "size": 4870752
       }
     },
@@ -309,11 +309,11 @@
         "5.15.189"
       ],
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/dm3q-S9180ZHS8FZF5/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/dm3q-S9180ZHS8FZF5/cve-2026-43499-app.so",
         "size": 137728
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-dm3q-S9180ZHS8FZF5-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-dm3q-S9180ZHS8FZF5-kdp",
         "size": 4556352
       }
     },
@@ -328,11 +328,11 @@
       ],
       "requiresFreshP0Session": true,
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/e1s-S921NKSSFDZF3/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/e1s-S921NKSSFDZF3/cve-2026-43499-app.so",
         "size": 104128
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-e1s-S921NKSSFDZF3-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-e1s-S921NKSSFDZF3-kdp",
         "size": 4758872
       }
     },
@@ -346,11 +346,11 @@
         "5.15.153"
       ],
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/dm1q-S911U1UES6DYI3/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/dm1q-S911U1UES6DYI3/cve-2026-43499-app.so",
         "size": 130168
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-dm1q-S911U1UES6DYI3-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-dm1q-S911U1UES6DYI3-kdp",
         "size": 4758792
       }
     },
@@ -365,11 +365,11 @@
       ],
       "requiresFreshP0Session": true,
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/r12s-S721BXXSCDZF3/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/r12s-S721BXXSCDZF3/cve-2026-43499-app.so",
         "size": 104128
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-r12s-S721BXXSCDZF3-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-r12s-S721BXXSCDZF3-kdp",
         "size": 6419768
       }
     },
@@ -384,11 +384,11 @@
       ],
       "requiresFreshP0Session": true,
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/gts9-X710XXS6EZF1/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/gts9-X710XXS6EZF1/cve-2026-43499-app.so",
         "size": 132688
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-gts9-X710XXS6EZF1-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-gts9-X710XXS6EZF1-kdp",
         "size": 4783256
       }
     },
@@ -403,11 +403,11 @@
       ],
       "requiresFreshP0Session": true,
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/e3q-S9280ZCS6DZF2/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/e3q-S9280ZCS6DZF2/cve-2026-43499-app.so",
         "size": 104128
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-e3q-S9280ZCS6DZF2-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-e3q-S9280ZCS6DZF2-kdp",
         "size": 4879856
       }
     },
@@ -422,11 +422,11 @@
         "6.6.98-android15-8-pd6ff1cd-abogkiS9360ZHSCCZG1-4k"
       ],
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/pa2q-S9360ZHSCCZG1/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/pa2q-S9360ZHSCCZG1/cve-2026-43499-app.so",
         "size": 126624
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-s25u-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-s25u-kdp",
         "size": 6407096
       }
     },
@@ -441,11 +441,11 @@
         "6.6.98-android15-8-pd6ff1cd-abogkiS9360ZHSDCZH1-4k"
       ],
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/pa2q-S9360ZHSDCZH1/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/pa2q-S9360ZHSDCZH1/cve-2026-43499-app.so",
         "size": 126624
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-s25u-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-s25u-kdp",
         "size": 6407096
       }
     },
@@ -460,11 +460,11 @@
         "6.6.98-android15-8-pd6ff1cd-abogkiS9310ZHSDCZH1-4k"
       ],
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/pa1q-S9310ZHSDCZH1/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/pa1q-S9310ZHSDCZH1/cve-2026-43499-app.so",
         "size": 126624
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-s25u-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-s25u-kdp",
         "size": 6407096
       }
     },
@@ -479,11 +479,11 @@
         "6.6.127-android15-8-p33f4ffe-abogkiS9360ZHUDDZIF-4k"
       ],
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/pa2q-S9360ZHUDDZIF/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/pa2q-S9360ZHUDDZIF/cve-2026-43499-app.so",
         "size": 126624
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-s25u-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-s25u-kdp",
         "size": 6407096
       }
     },
@@ -498,11 +498,11 @@
         "6.6.127-android15-8-p87b1ce1-abogkiS9360ZHSEDZJ1-4k"
       ],
       "exploit": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/artifacts/pa2q-S9360ZHSEDZJ1/cve-2026-43499-app.so",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/pa2q-S9360ZHSEDZJ1/cve-2026-43499-app.so",
         "size": 126624
       },
       "kernelsu": {
-        "url": "https://raw.githubusercontent.com/BuSung-dev/Root-My-Galaxy-Payloads/main/kernelsu/ksud-s25u-kdp",
+        "url": "https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/kernelsu-v3.2.5/ksud-s25u-kdp",
         "size": 6407096
       }
     }

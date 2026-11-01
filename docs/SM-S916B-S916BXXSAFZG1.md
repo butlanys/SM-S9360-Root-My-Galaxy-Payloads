@@ -80,7 +80,7 @@ KernelSU initialization is not yet confirmed on this exact S916B build. The modu
 
 ## Artifacts and commands
 
-See [`../artifacts/dm2q-S916BXXSAFZG1/README.md`](../artifacts/dm2q-S916BXXSAFZG1/README.md) for hashes, build commands, the exact ADB shell invocation, root verification, and KernelSU late-load steps.
+See [`dm2q-S916BXXSAFZG1`](https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/tag/dm2q-S916BXXSAFZG1) for hashes, build commands, the exact ADB shell invocation, root verification, and KernelSU late-load steps.
 
 ## Authorship
 

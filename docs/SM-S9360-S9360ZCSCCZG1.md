@@ -112,7 +112,7 @@ Outputs in `build/pa2q-S9360ZCSCCZG1/`:
 | file | use |
 | --- | --- |
 | `cve-2026-43499` | root-umh variant (LD_PRELOAD) |
-| `cve-2026-43499-app.so` | app variant (used via `--run-payload`) → copy to `artifacts/pa2q-S9360ZCSCCZG1/` |
+| `cve-2026-43499-app.so` | app variant (used via `--run-payload`) → publish as the `pa2q-S9360ZCSCCZG1` release: `https://github.com/butlanys/SM-S9360-Root-My-Galaxy-Payloads/releases/download/pa2q-S9360ZCSCCZG1/cve-2026-43499-app.so` |
 | `cve-2026-43499-root` | root helper / su_daemon |
 
 The kernel extraction + offset derivation procedure is in
